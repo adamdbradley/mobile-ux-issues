@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Mobile-ux-issues</title>
-  <style>
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
 <body>
 
+  <header>
+    Mobile UX Issues
+  </header>
 
+  <section>
+    <scrollable>
+
+      <p>
+        Goal is to layout some of the UX challenges
+        when trying to make native-like webapps on mobile.
+      </p>
+
+      <ul>
+        <li><a href="auto-scroll.html">Auto-scrolling to inputs</a></li>
+        <li><a href="keyboard-bar.html">Keyboard Accessory Bar</a></li>
+        <li><a href="keyboard-focus.html">Keyboard/Input Focus</a></li>
+        <li><a href="scrollbars.html">Adjust Scrollbars to Content</a></li>
+      </ul>
+
+      <p>
+        <a href="https://docs.google.com/document/d/1udBL5YUb9B8l33Hxrf36h_4KerW4DyXT03RUqUIbltI/edit">
+          Mobile Webapp UX Feedback Google Doc
+        </a>
+      </p>
+
+      <p id="ua"></p>
+      <script>
+        document.getElementById('ua').textContent = navigator.userAgent;
+      </script>
+
+    </scrollable>
+  </section>
+
+  <footer>
+    Footer
+  </footer>
 
 </body>
 </html>

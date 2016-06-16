@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mobile-ux-issues</title>
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
+  <style>
+
+    /* https://css-tricks.com/examples/WebKitScrollbars/ */
+    /* Let's get this party started */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(255,0,0,0.8);
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+      background: rgba(255,0,0,0.4);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header style="opacity: 0.7;">
+    Customizable Scrollbars
+  </header>
+
+  <section>
+    <scrollable>
+
+      <p>
+        Problem: Another clear signal it's a webapp and not a native app,
+        is when the content's scrollbar goes under headers/footers. Only
+        desktop appears to support customizing scrollbar location.
+      </p>
+      <p>Use Case: Let's say an app has a fixed header/footer, with a
+        transparency effect on the header, and the content
+        area is scrollable. When the content scrolls, it should be able
+        to scroll under the header and footer. All of this works as is,
+        however the scrollbar track is sized to the entire scrollable area, which
+        means the track also shows under the headers and footers, rather
+        than stopping where the header/footer begin.
+      </p>
+      <p>
+        Proposal: Allow margins to adjust where the scrollbars show.
+      </p>
+
+      <p>
+        Current Results:
+      </p>
+      <ul>
+        <li>Android: Works (was this fixed recently? Either way, huzzah!)</li>
+        <li>iOS 9.3.2 / Chrome and Safari: Scrollbar goes under the header</li>
+      </ul>
+
+      <p>
+        Below is a tall element so there is a scrollable area. Notice how the
+        scrollbar goes under the header. The scrollbar track can be adjusted on
+        desktop, but not mobile.
+      </p>
+
+      <filler></filler>
+
+    </scrollable>
+  </section>
+
+  <footer style="opacity: 0.7;">
+    <a href="index.html">Homepage</a>
+  </footer>
+
+</body>
+</html>
