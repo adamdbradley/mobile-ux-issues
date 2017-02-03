@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mobile-ux-issues: Chat App</title>
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+
+  <header>
+    Chat App
+  </header>
+
+  <section>
+    <scrollable>
+      <p>
+        A good challenge for the mobile web is to create a chat app that works just as
+        good as the Slack or Twitter apps. Currently, getting a chat app's text input
+        found in the footer, to float on top of the keyboard, and being able to control
+        the app after a user taps into the text input is quite difficult.
+      </p>
+
+      <p>
+        In this example the chat input is within a footer that is position fixed on the bottom.
+        It works ok when you tap the input, and the input stays on top of the keyboard.
+        However, the header scrolls up out of view, which is not what Slack or Twitter
+        native apps would do. Additionally, a chat app would not have a keyboard accessory bar
+        containing the "Next/Down", "Previous/Up" and "Done/Close" buttons.
+      </p>
+
+
+      <filler></filler>
+
+
+      <div class="chat-footer">
+        <div class="chat-row">
+          <input value="Chat message">
+          <button>Send</button>
+        </div>
+      </div>
+
+    </scrollable>
+  </section>
+
+  <script src="assets/scripts.js"></script>
+
+</body>
+</html>
